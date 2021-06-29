@@ -26,7 +26,10 @@ const ApiCall = () => {
       SouthAfrica(dataJson);
       ///end of Cases
     } catch (error) {
-      console.log(error);
+      const heading = document.createElement("h1");
+      heading.textContent = error;
+      heading.style.color = "red";
+      document.body.appendChild(heading);
     }
   }
   getApi();

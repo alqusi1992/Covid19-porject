@@ -23,6 +23,7 @@ const FormElements = () => {
     const hideHeadingTable = document.querySelector(".heading-table");
     hideHeadingTable.style.display = "none";
   });
+
   /* fetch the data */
 
   fromElement.addEventListener("submit", (e) => {
@@ -37,10 +38,17 @@ const FormElements = () => {
       return fetch(url);
     }
 
+    // loading
+    const spinner = document.createElement("div");
+    spinner.id = "spinner";
+    interFace.appendChild(spinner);
+
     function init() {
+      spinner.removeAttribute("hidden");
       fetchData(`https://api.covid19api.com/dayone/country/${submitValue}`)
         .then((res) => res.json())
         .then((res) => {
+          spinner.setAttribute("hidden", "");
           console.log(res);
           const length = res.length;
           const index = length - 1;

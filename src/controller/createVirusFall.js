@@ -1,4 +1,4 @@
-function createVirusFall() {
+const createVirusFall = () => {
   const heart = document.createElement("div");
 
   heart.classList.add("heart");
@@ -13,5 +13,5 @@ function createVirusFall() {
   setTimeout(() => {
     heart.remove();
   }, 2000);
-}
+};
 export default createVirusFall;
