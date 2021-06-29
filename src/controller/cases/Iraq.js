@@ -1,12 +1,12 @@
 const Iraq = (dataJson) => {
   // Iraq cases
 
-  const totalConfirmedIraq = dataJson.Countries[79].TotalConfirmed;
-  const totalDeathsIraq = dataJson.Countries[79].TotalDeaths;
-  const totalRecoveredIraq = dataJson.Countries[79].TotalRecovered;
-  const newConfirmedIraq = dataJson.Countries[79].NewConfirmed;
-  const newDeathsIraq = dataJson.Countries[79].NewDeaths;
-  const newRecoveredIraq = dataJson.Countries[79].NewRecovered;
+  const totalConfirmedIraq = dataJson[96].cases;
+  const totalDeathsIraq = dataJson[96].deaths;
+  const totalRecoveredIraq = dataJson[96].recovered;
+  const newConfirmedIraq = dataJson[96].population;
+  const newDeathsIraq = dataJson[96].todayDeaths;
+  const newRecoveredIraq = dataJson[96].critical;
 
   document.getElementById("totalConfirmedIraq").innerHTML = totalConfirmedIraq;
   document.getElementById("totalDeathsIraq").innerHTML = totalDeathsIraq;

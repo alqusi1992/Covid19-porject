@@ -1,5 +1,5 @@
 import Italy from "./cases/Italy.js";
-import Brazil from "./cases/Brasil.js";
+import Brazil from "./cases/Brazil.js";
 import Iraq from "./cases/Iraq.js";
 import Jordan from "./cases/Jordan.js";
 import Germany from "./cases/Germany.js";
@@ -11,8 +11,9 @@ import SouthAfrica from "./cases/SouthAfrica.js";
 const ApiCall = () => {
   async function getApi() {
     try {
-      const fetchApi = await fetch("https://api.covid19api.com/summary");
+      const fetchApi = await fetch("https://corona.lmao.ninja/v2/countries");
       const dataJson = await fetchApi.json();
+      console.log(dataJson);
       //cases
       Italy(dataJson);
       Brazil(dataJson);

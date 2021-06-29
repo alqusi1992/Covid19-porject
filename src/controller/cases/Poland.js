@@ -1,12 +1,12 @@
 const Poland = (dataJson) => {
   // Poland
 
-  const totalConfirmedPoland = dataJson.Countries[137].TotalConfirmed;
-  const totalDeathsPoland = dataJson.Countries[137].TotalDeaths;
-  const totalRecoveredPoland = dataJson.Countries[137].TotalRecovered;
-  const newConfirmedPoland = dataJson.Countries[137].NewConfirmed;
-  const newDeathsPoland = dataJson.Countries[137].NewDeaths;
-  const newRecoveredPoland = dataJson.Countries[137].NewRecovered;
+  const totalConfirmedPoland = dataJson[158].cases;
+  const totalDeathsPoland = dataJson[158].deaths;
+  const totalRecoveredPoland = dataJson[158].recovered;
+  const newConfirmedPoland = dataJson[158].population;
+  const newDeathsPoland = dataJson[158].todayDeaths;
+  const newRecoveredPoland = dataJson[158].critical;
 
   document.getElementById("totalConfirmedPoland").innerHTML =
     totalConfirmedPoland;
