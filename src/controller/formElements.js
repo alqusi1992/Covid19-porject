@@ -45,13 +45,11 @@ const FormElements = () => {
 
     function init() {
       spinner.removeAttribute("hidden");
-      fetchData(`https://api.covid19api.com/dayone/country/${submitValue}`)
+      fetchData(`https://corona.lmao.ninja/v2/countries/${submitValue}`)
         .then((res) => res.json())
         .then((res) => {
           spinner.setAttribute("hidden", "");
           console.log(res);
-          const length = res.length;
-          const index = length - 1;
 
           const confirmed = totalConfirmed;
           const recovered = totalRecovered;
@@ -63,10 +61,10 @@ const FormElements = () => {
           death.innerHTML = "";
           newCases.innerHTML = "";
 
-          confirmed.append(`Total Confirmed: ${res[index].Confirmed}`);
-          recovered.append(`Total Recovered: ${res[index].Recovered}`);
-          death.append(`Total Death:  ${res[index].Deaths}`);
-          newCases.append(`New Confirmed: ${res[index].Active} `);
+          confirmed.append(`Total Confirmed: ${res.cases}`);
+          recovered.append(`Total Recovered: ${res.recovered}`);
+          death.append(`New Death:  ${res.todayDeaths}`);
+          newCases.append(`New Confirmed: ${res.active} `);
         })
         .catch((error) => {
           window.alert(`Please Enter your Country Name`);

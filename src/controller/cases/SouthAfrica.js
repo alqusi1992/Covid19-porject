@@ -1,12 +1,12 @@
 const SouthAfrica = (dataJson) => {
   // South Africa
 
-  const totalConfirmedSouthAfrica = dataJson.Countries[160].TotalConfirmed;
-  const totalDeathsSouthAfrica = dataJson.Countries[160].TotalDeaths;
-  const totalRecoveredSouthAfrica = dataJson.Countries[160].TotalRecovered;
-  const newConfirmedSouthAfrica = dataJson.Countries[160].NewConfirmed;
-  const newDeathsSouthAfrica = dataJson.Countries[160].NewDeaths;
-  const newRecoveredSouthAfrica = dataJson.Countries[160].NewRecovered;
+  const totalConfirmedSouthAfrica = dataJson[186].cases;
+  const totalDeathsSouthAfrica = dataJson[186].deaths;
+  const totalRecoveredSouthAfrica = dataJson[186].recovered;
+  const newConfirmedSouthAfrica = dataJson[186].population;
+  const newDeathsSouthAfrica = dataJson[186].todayDeaths;
+  const newRecoveredSouthAfrica = dataJson[186].critical;
 
   document.getElementById("totalConfirmedSouthAfrica").innerHTML =
     totalConfirmedSouthAfrica;

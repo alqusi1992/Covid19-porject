@@ -1,12 +1,12 @@
 const Brazil = (dataJson) => {
   // Brazil Cases
 
-  const totalConfirmedBrazil = dataJson.Countries[23].TotalConfirmed;
-  const totalDeathsBrazil = dataJson.Countries[23].TotalDeaths;
-  const totalRecoveredBrazil = dataJson.Countries[23].TotalRecovered;
-  const newConfirmedBrazil = dataJson.Countries[23].NewConfirmed;
-  const newDeathsBrazil = dataJson.Countries[23].NewDeaths;
-  const newRecoveredBrazil = dataJson.Countries[23].NewRecovered;
+  const totalConfirmedBrazil = dataJson[26].cases;
+  const totalDeathsBrazil = dataJson[26].deaths;
+  const totalRecoveredBrazil = dataJson[26].recovered;
+  const newConfirmedBrazil = dataJson[26].population;
+  const newDeathsBrazil = dataJson[26].todayDeaths;
+  const newRecoveredBrazil = dataJson[26].critical;
 
   document.getElementById("totalConfirmedBrazil").innerHTML =
     totalConfirmedBrazil;
