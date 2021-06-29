@@ -1,6 +1,6 @@
 const interFace = document.querySelector("#interface");
 import TableViewCell from "./tableView.js";
-function makeTable() {
+const makeTable = () => {
   const tableHeading = document.createElement("h2");
   tableHeading.textContent =
     "If you don't found your country name in the table, please enter it in the field";
@@ -10,5 +10,5 @@ function makeTable() {
   TableViewCell(table);
 
   interFace.append(table);
-}
+};
 export default makeTable;
